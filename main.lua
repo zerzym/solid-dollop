@@ -153,8 +153,9 @@ Start.BackgroundColor3 = Color3.fromRGB(106, 181, 83)
 Start.BackgroundTransparency = 1.000
 Start.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Start.BorderSizePixel = 0
-Start.Position = UDim2.new(0.0536874942, 0, 0.572072089, 0)
-Start.Size = UDim2.new(0, 132, 0, 42)
+Start.Position = UDim2.new(0.022577405, 0, 0.489615351, 0)
+Start.Size = UDim2.new(0, 151, 0, 99)
+Start.ZIndex = 5
 Start.Font = Enum.Font.SourceSans
 Start.Text = ""
 Start.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -168,9 +169,9 @@ Color.AnchorPoint = Vector2.new(0.5, 0.5)
 Color.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Color.BackgroundTransparency = 1.000
 Color.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Color.Position = UDim2.new(0.5, 0, 0.5, 0)
+Color.Position = UDim2.new(0.513433397, 0, 0.584996641, 0)
 Color.Selectable = true
-Color.Size = UDim2.new(1, 0, 1, 0)
+Color.Size = UDim2.new(0.826726437, 0, 0.412773222, 0)
 Color.Image = "rbxassetid://3570695787"
 Color.ImageColor3 = Color3.fromRGB(106, 181, 83)
 Color.ScaleType = Enum.ScaleType.Slice
@@ -183,7 +184,7 @@ Run.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Run.BackgroundTransparency = 1.000
 Run.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Run.BorderSizePixel = 0
-Run.Position = UDim2.new(0.0759695768, 0, 0.146638051, 0)
+Run.Position = UDim2.new(0.0599484295, 0, 0.122167252, 0)
 Run.Size = UDim2.new(0, 110, 0, 29)
 Run.Font = Enum.Font.SourceSans
 Run.Text = "Start"
@@ -194,27 +195,27 @@ Run.TextWrapped = true
 
 -- Scripts:
 
-local function ZQIPWQD_fake_script() -- Exit.ExitScript 
+local function QMWAJ_fake_script() -- Exit.ExitScript 
 	local script = Instance.new('LocalScript', Exit)
 
-	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(ZQIPWQD_fake_script)()
-local function WDXFAGG_fake_script() -- Min.MinScript 
+coroutine.wrap(QMWAJ_fake_script)()
+local function NGUSELG_fake_script() -- Min.MinScript 
 	local script = Instance.new('LocalScript', Min)
 
 	local min = false
 	local gui = script.Parent.Parent.MainFrame
 	
-	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Activated:Connect(function()
 		gui.Visible = not gui.Visible
 		min = not min
 	end)
 end
-coroutine.wrap(WDXFAGG_fake_script)()
-local function RKEBHQG_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(NGUSELG_fake_script)()
+local function PTARGRY_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local victimname = ""
@@ -233,8 +234,8 @@ local function RKEBHQG_fake_script() -- TextBox.LocalScript
 		end)
 	end
 end
-coroutine.wrap(RKEBHQG_fake_script)()
-local function DMDAW_fake_script() -- Start.RunScript 
+coroutine.wrap(PTARGRY_fake_script)()
+local function CCND_fake_script() -- Start.RunScript 
 	local script = Instance.new('LocalScript', Start)
 
 	local geen = Color3.fromRGB(106, 181, 83)
@@ -267,7 +268,7 @@ local function DMDAW_fake_script() -- Start.RunScript
 	end
 	
 	
-	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.Activated:Connect(function()
 		if not running then
 			running = not running
 			script.Parent.Color.Run.Text = "Stop"
@@ -283,8 +284,8 @@ local function DMDAW_fake_script() -- Start.RunScript
 		end
 	end)
 end
-coroutine.wrap(DMDAW_fake_script)()
-local function DDHHL_fake_script() -- Bar.DragScript 
+coroutine.wrap(CCND_fake_script)()
+local function GRPGYUC_fake_script() -- Bar.DragScript 
 	local script = Instance.new('LocalScript', Bar)
 
 	local gui = script.Parent
@@ -328,4 +329,4 @@ local function DDHHL_fake_script() -- Bar.DragScript
 		end
 	end)
 end
-coroutine.wrap(DDHHL_fake_script)()
+coroutine.wrap(GRPGYUC_fake_script)()
