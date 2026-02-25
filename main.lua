@@ -54,6 +54,7 @@ Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Exit.BorderSizePixel = 0
 Exit.Position = UDim2.new(0.902273834, 0, 0.150000006, 0)
 Exit.Size = UDim2.new(0, 25, 0, 34)
+Exit.ZIndex = 5
 Exit.Font = Enum.Font.SourceSans
 Exit.Text = ""
 Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -85,6 +86,7 @@ Min.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Min.BorderSizePixel = 0
 Min.Position = UDim2.new(0.80238235, 0, 0.150000006, 0)
 Min.Size = UDim2.new(0, 30, 0, 34)
+Min.ZIndex = 5
 Min.Font = Enum.Font.SourceSans
 Min.Text = ""
 Min.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -126,7 +128,7 @@ InfoFrame.Name = "InfoFrame"
 InfoFrame.Parent = MainFrame
 InfoFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 InfoFrame.BackgroundTransparency = 1.000
-InfoFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+InfoFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
 InfoFrame.Position = UDim2.new(0.440104157, 0, 0.246755511, 0)
 InfoFrame.Size = UDim2.new(0, 204, 0, 153)
 InfoFrame.Image = "rbxassetid://3570695787"
@@ -195,15 +197,15 @@ Run.TextWrapped = true
 
 -- Scripts:
 
-local function QMWAJ_fake_script() -- Exit.ExitScript 
+local function JUJBAZ_fake_script() -- Exit.ExitScript 
 	local script = Instance.new('LocalScript', Exit)
 
 	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(QMWAJ_fake_script)()
-local function NGUSELG_fake_script() -- Min.MinScript 
+coroutine.wrap(JUJBAZ_fake_script)()
+local function HUHE_fake_script() -- Min.MinScript 
 	local script = Instance.new('LocalScript', Min)
 
 	local min = false
@@ -214,8 +216,8 @@ local function NGUSELG_fake_script() -- Min.MinScript
 		min = not min
 	end)
 end
-coroutine.wrap(NGUSELG_fake_script)()
-local function PTARGRY_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(HUHE_fake_script)()
+local function ASEVD_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local victimname = ""
@@ -230,12 +232,12 @@ local function PTARGRY_fake_script() -- TextBox.LocalScript
 			local ping = math.random(50, 100)
 			local fps = math.random(30, 60)
 	
-			script.Parent.Text = "Victim:"..victimname.."\nPing:"..ping.."\nFPS:"..fps.."\n"
+			script.Parent.Text = "🚹Victim:"..victimname.."\n📶Ping:"..ping.."\n⏰FPS:"..fps.."\n"
 		end)
 	end
 end
-coroutine.wrap(PTARGRY_fake_script)()
-local function CCND_fake_script() -- Start.RunScript 
+coroutine.wrap(ASEVD_fake_script)()
+local function ZVRT_fake_script() -- Start.RunScript 
 	local script = Instance.new('LocalScript', Start)
 
 	local geen = Color3.fromRGB(106, 181, 83)
@@ -274,6 +276,12 @@ local function CCND_fake_script() -- Start.RunScript
 			script.Parent.Color.Run.Text = "Stop"
 			script.Parent.Color.ImageColor3 = red
 			while task.wait() do
+				for i, v in game.Players.LocalPlayer.Character:GetChildren() do
+					if v:IsA("Tool") then
+						v:Destroy()
+					end
+				end
+				game.Players.LocalPlayer.Backpack:ClearAllChildren()
 				game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Anchored = true
 				g()
 			end
@@ -284,8 +292,8 @@ local function CCND_fake_script() -- Start.RunScript
 		end
 	end)
 end
-coroutine.wrap(CCND_fake_script)()
-local function GRPGYUC_fake_script() -- Bar.DragScript 
+coroutine.wrap(ZVRT_fake_script)()
+local function PBSVE_fake_script() -- Bar.DragScript 
 	local script = Instance.new('LocalScript', Bar)
 
 	local gui = script.Parent
@@ -329,4 +337,4 @@ local function GRPGYUC_fake_script() -- Bar.DragScript
 		end
 	end)
 end
-coroutine.wrap(GRPGYUC_fake_script)()
+coroutine.wrap(PBSVE_fake_script)()
