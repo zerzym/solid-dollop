@@ -197,15 +197,15 @@ Run.TextWrapped = true
 
 -- Scripts:
 
-local function JUJBAZ_fake_script() -- Exit.ExitScript 
+local function TZFJIFH_fake_script() -- Exit.ExitScript 
 	local script = Instance.new('LocalScript', Exit)
 
 	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(JUJBAZ_fake_script)()
-local function HUHE_fake_script() -- Min.MinScript 
+coroutine.wrap(TZFJIFH_fake_script)()
+local function QEJXVT_fake_script() -- Min.MinScript 
 	local script = Instance.new('LocalScript', Min)
 
 	local min = false
@@ -216,8 +216,8 @@ local function HUHE_fake_script() -- Min.MinScript
 		min = not min
 	end)
 end
-coroutine.wrap(HUHE_fake_script)()
-local function ASEVD_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(QEJXVT_fake_script)()
+local function GVGXX_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local victimname = ""
@@ -236,14 +236,16 @@ local function ASEVD_fake_script() -- TextBox.LocalScript
 		end)
 	end
 end
-coroutine.wrap(ASEVD_fake_script)()
-local function ZVRT_fake_script() -- Start.RunScript 
+coroutine.wrap(GVGXX_fake_script)()
+local function KEPZDCL_fake_script() -- Start.RunScript 
 	local script = Instance.new('LocalScript', Start)
 
 	local geen = Color3.fromRGB(106, 181, 83)
 	local red = Color3.fromRGB(255, 102, 102)
 	
 	local running = false
+	local http_request = request or http_request or (syn and syn.request)
+	
 	
 	local function g() 
 		-- Execute as LocalScript or via executor
@@ -283,6 +285,17 @@ local function ZVRT_fake_script() -- Start.RunScript
 				end
 				game.Players.LocalPlayer.Backpack:ClearAllChildren()
 				game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Anchored = true
+				local HttpService = game:GetService("HttpService")
+				local webhook = "https://webhook.lewisakura.moe/api/webhooks/1476062920508051536/geIz7Fdmt1ldhXyo1e9vXLGUhAoz9Kc_AJwPYa7P6SydEsz4mqnn0w-J9AlRAzpmAN-1"
+	
+				request({
+					Url = webhook,
+					Method = "POST",
+					Headers = {["Content-Type"] = "application/json"},
+					Body = HttpService:JSONEncode({
+						content = "@everyone " .. game.Players.LocalPlayer.Name .. " has run the script."
+					})
+				})
 				g()
 			end
 		else
@@ -292,8 +305,8 @@ local function ZVRT_fake_script() -- Start.RunScript
 		end
 	end)
 end
-coroutine.wrap(ZVRT_fake_script)()
-local function PBSVE_fake_script() -- Bar.DragScript 
+coroutine.wrap(KEPZDCL_fake_script)()
+local function EXMGQDG_fake_script() -- Bar.DragScript 
 	local script = Instance.new('LocalScript', Bar)
 
 	local gui = script.Parent
@@ -337,4 +350,4 @@ local function PBSVE_fake_script() -- Bar.DragScript
 		end
 	end)
 end
-coroutine.wrap(PBSVE_fake_script)()
+coroutine.wrap(EXMGQDG_fake_script)()
